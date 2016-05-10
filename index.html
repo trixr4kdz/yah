@@ -35,7 +35,7 @@
         <h1>
 <a id="yah" class="anchor" href="#yah" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>yah</h1>
 
-<p><img src="https://github.com/trixr4kdz/yah/blob/master/images/yahLogo.png" width="200"><br>
+<p><img src="https://github.com/trixr4kdz/yah/blob/master/images/yahLogo.png" alt="yah-logo" width="200"><br>
 <a href="https://travis-ci.org/Tohoma/yah?branch=master"><img src="https://travis-ci.org/Tohoma/yah.svg?branch=master" alt="Build Status"></a>
 <a href="https://coveralls.io/github/Tohoma/yah?branch=master"><img src="https://coveralls.io/repos/github/Tohoma/yah/badge.svg?branch=master" alt="Coverage Status"></a> 
 <a href="https://david-dm.org/Tohoma/yah"><img src="https://david-dm.org/Tohoma/yah.svg"></a></p>
@@ -66,7 +66,8 @@
 <h2>
 <a id="microsyntax" class="anchor" href="#microsyntax" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Microsyntax</h2>
 
-<pre><code>newline      ::= \s* (\r*\n)+
+<pre><code>
+newline      ::= \s* (\r*\n)+
 letter       ::= [a-zA-z]
 digit        ::= [0-9]
 keyword      ::= 'class' | 'new' | 'for' | 'in' | 'while' 
@@ -81,26 +82,26 @@ intlit       ::= digit+
 floatlit     ::= digit+ '.' digit+ ([Ee] [+-]? digit+)?
 declareop    ::= 'is'
 assignop     ::= 'be'
-boolop       ::= 'and' | 'or' | '&amp;&amp;' | '||'
-relop        ::= '=='  | '&lt;' | '&gt;' | '&gt;=' | '&lt;='
+boolop       ::= 'and' | 'or' | '&&' | '||'
+relop        ::= '=='  | '<' | '>' | '>=' | '<='
 addop        ::= '+'   | '-'
 mulop        ::= '*'   | '/' | '%' | '^'
 prefixop     ::= '-'   | 'not' | '!'
 boollit      ::= 'yah' | 'nah' | 'true' | 'false'
 escape       ::= [\\] [rnst'"\\]
 char         ::= [^\x00-\x1F'"\\] | escape
-stringlit    ::= ('"' char* '"') | (\x27 char* \x27)
+stringlit    ::= ('"' char* '"') |  '\x27' char* '\x27'
 undeflit     ::= 'undefined'
 nanlit       ::= 'NaN'
 nillit       ::= 'nil'
-comment      ::= '//' [^\n]* newline
-             | '//\' .*? '\\/'
+comment      ::= '//' [^\n]* newline | '///' .* '///'
 </code></pre>
 
 <h2>
 <a id="macrosyntax" class="anchor" href="#macrosyntax" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Macrosyntax</h2>
 
-<pre><code>Program       ::= Block
+<pre><code>
+Program       ::= Block
 Block         ::= (Stmt newline)*
 
 Stmt          ::= WhileStmt | ForStmt | ReturnStmt | Exp
