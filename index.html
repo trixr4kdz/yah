@@ -24,7 +24,7 @@
       <div id="banner">
         <span id="logo"></span>
 
-        <a href="https://github.com/Tohoma/yah" class="button fork"><strong>View On GitHub</strong></a>
+        <a href="https://github.com/trixr4kdz/yah" class="button fork"><strong>View On GitHub</strong></a>
       </div><!-- end banner -->
 
     <div class="wrapper">
@@ -35,9 +35,9 @@
         <h1>
 <a id="yah" class="anchor" href="#yah" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>yah</h1>
 
-<p><img src="https://github.com/Tohoma/yah/blob/master/images/yahLogo.png" alt="yah-logo" width="200"><br>
+<p><img src="https://github.com/trixr4kdz/yah/blob/master/images/yahLogo.png" alt="yah-logo" width="200"><br>
 <a href="https://travis-ci.org/Tohoma/yah?branch=master"><img src="https://travis-ci.org/Tohoma/yah.svg?branch=master" alt="Build Status"></a>
-<a href="https://coveralls.io/github/Tohoma/yah?branch=master"><img src="https://coveralls.io/repos/github/Tohoma/yah/badge.svg?branch=master" alt="Coverage Status"></a> 
+<a href="https://coveralls.io/github/Tohoma/yah?branch=master"><img src="https://coveralls.io/repos/github/Tohoma/yah/badge.svg?branch=master" alt="Coverage Status"></a>
 <a href="https://david-dm.org/Tohoma/yah"><img src="https://david-dm.org/Tohoma/yah.svg"></a></p>
 
 <p>A language for CMSI 488</p>
@@ -70,8 +70,8 @@
 newline      ::= \s* (\r*\n)+
 letter       ::= [a-zA-z]
 digit        ::= [0-9]
-keyword      ::= 'class' | 'new' | 'for' | 'in' | 'while' 
-             | 'and' | 'or' | 'is' | 'be' | 'if' | 'else' 
+keyword      ::= 'class' | 'new' | 'for' | 'in' | 'while'
+             | 'and' | 'or' | 'is' | 'be' | 'if' | 'else'
              | 'eq' | 'neq' | 'gt' | 'lt' | 'geq' | 'leq'
              | 'not' | 'yah' | 'nah' |
              | 'spit' | 'nil' | 'undefined' | 'NaN'
@@ -168,8 +168,8 @@ b is "what"                                                 var b = "what";
 c is yah                                                    var c = true;
 d is nah                                                    var d = false;
 
-e is ͡° ͜ʖ ͡°                                               var e = undefined;  
-banana is undefined                                         var banana = undefined;                                
+e is ͡° ͜ʖ ͡°                                               var e = undefined;
+banana is undefined                                         var banana = undefined;
 f is ಠ_ಠ                                                    var f = null;
 apple is nil                                                var apple = null;
 g is :^)                                                    var g = NaN;
@@ -216,11 +216,11 @@ dog be 3                                                   // Produces a compile
 stringTwo is "bruh"                                         var stringTwo = "bruh";
 banana is 10                                                var banana = 10;
 
-stringThree is "sup \(StringTwo)                            var stringThree = "sup " + 
-    here's \(banana) dollars"                                   stringTwo + " here's " + 
+stringThree is "sup \(StringTwo)                            var stringThree = "sup " +
+    here's \(banana) dollars"                                   stringTwo + " here's " +
                                                                 banana + " dollars";
 
-print stringThree                                          console.log(stringThree);       
+print stringThree                                          console.log(stringThree);
 </code></pre>
 
 <p>The following are some string operations.</p>
@@ -265,7 +265,7 @@ x == y ? yah : nah                                          (x === y) ? true : f
 <h3>
 <a id="equivalency-and-other-relational-operations" class="anchor" href="#equivalency-and-other-relational-operations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Equivalency and other Relational operations</h3>
 
-<p>Equivalency in yah takes the form of <code>eq var1, var2, ..., vari</code>. Other relational operations preform the same way. 
+<p>Equivalency in yah takes the form of <code>eq var1, var2, ..., vari</code>. Other relational operations preform the same way.
 Arguments are evaluated from left to right.</p>
 
 <pre><code>spit eq 2,2                                                 return 2 === 2;
@@ -277,7 +277,7 @@ spit (eq 1,2 )                                              return 1 === 2;
 spit gt 10,11,12,1                                          return 10 &gt; 11 &amp;&amp; 11 &gt; 12 &amp;&amp; 12 &gt; 1;
 
 temp is 40                                                  var temp = 40;
-spit lt 10,12,temp,100                                      return 10 &lt; 12 &amp;&amp; 12 &lt; temp &amp;&amp; temp &lt; 100;     
+spit lt 10,12,temp,100                                      return 10 &lt; 12 &amp;&amp; 12 &lt; temp &amp;&amp; temp &lt; 100;
 
 geq 11,2,1                                                  11 &gt;= 2 &amp;&amp; 2 &gt;= 1;
 leq 12,1,0                                                  12 &lt;= 1 &amp;&amp; 1 &lt;= 0;
@@ -340,12 +340,12 @@ print(printParam("Hello"))                                  console.log(printPar
 <pre><code>//This is a single line comment
 
 ///
-This is a 
+This is a
 multiline comment
 
 Still multiline
 
-Multiline comment ends below. 
+Multiline comment ends below.
 ///
 
 </code></pre>
@@ -485,7 +485,7 @@ sample((x) -&gt; print(x))                                     sample(function (
   if eq n,1:                                                    if (n === 1) {
     spit count                                                      return count;
   else:                                                         } else {
-    spit collatz((eq n % 2, 0 ? n / 2 : 3 * n + 1),                 return collatz(n % 2 === 0 ? n / 2 : 
+    spit collatz((eq n % 2, 0 ? n / 2 : 3 * n + 1),                 return collatz(n % 2 === 0 ? n / 2 :
       count++)                                                      3 * n + 1, count+=1);
                                                                 }
                                                             }
@@ -497,6 +497,6 @@ sample((x) -&gt; print(x))                                     sample(function (
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
   </body>
 </html>
